@@ -1,0 +1,6 @@
+<select (click)="doSearchC($event.target.value)" class="form-control input-sm"  data-live-search="true">
+
+    <option >categorie</option>
+    <option *ngFor="let item of categories" [(value)]="item.id">{{item.nomCategorie}}</option>
+   
+  </select>

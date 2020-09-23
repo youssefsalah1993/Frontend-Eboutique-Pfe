@@ -1,0 +1,39 @@
+test
+
+<div class="container">
+<!-- Lunch the setIndexVente function   -->
+  {{setIndexVente()}}
+    <div *ngFor="let i of Arr(rowGrid).fill(1)"  class="card-deck">
+      
+      
+      <div *ngFor="let j of Arr(num).fill(1) "   class="card">
+        <!-- execute the setIndexVente function to increment   -->
+
+        {{incIndexVente()}}
+        
+
+        <!--  <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="dd" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" role="img"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg> -->
+        <ng-container *ngIf="ventesLength >= indexVentes">
+        
+        <img  class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="dd" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" role="img" src="assets/temp-img/images.jpg" alt="Mountain">
+        
+           
+        <div class="card-body">
+          <h5 class="card-title"><a routerLink="details/{{ventes[(indexVentes-1)].id}}" >{{ventes[(indexVentes-1)].titleVente}}</a>  </h5>
+          <p class="card-text"><i class="fas fa-map-marker-alt"></i>   {{  tests[indexVentes-1]  }}</p>
+          <p class="card-text"><i class="fas fa-store-alt"></i> Boutique :  {{ nomBout[(indexVentes-1)] }}  </p>
+          <p class="card-text"><i class="fas fa-external-link-alt"></i> /{{ nomCat[(indexVentes-1)] }} ...</p>
+          <!-- <p class="card-text" >   <i class="fas fa-dollar-sign"></i> {{ ventes[(indexVentes-1)].prix | currency:'MAD ' }} DH </p> -->
+          <p class="card-text" >   <i class="fas fa-dollar-sign"></i>  <B>{{ ventes[(indexVentes-1)].prix   }}  DH</B>  </p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">{{ ventes[(indexVentes-1)].dateModification }}</small>
+        </div>
+        </ng-container>
+      
+      </div>
+      
+      </div>
+     
+  
+  </div>

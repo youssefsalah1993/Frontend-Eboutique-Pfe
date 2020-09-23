@@ -1,0 +1,112 @@
+<div  class="container">
+
+    <div class="card ">
+        <div class="card-header">
+            Depose noonce/....  
+         
+        </div>
+<br>
+<!-- <div [hidden]="submitted" style="width: 400px;"> -->
+
+<form (ngSubmit)="onSubmit()">
+    
+    <div class="form-group">
+        <label for="nomAnnonce">Nom de l'annonce</label>
+    <input class="form-control" id="titleVente" name="titleVente" type="text" required [(ngModel)]="vente.titleVente" placeholder="Nom annonce">
+    </div>
+
+    
+    <!-- <input type="hidden" id="id_boutique" name="id_boutique" [(ngModel)]="vente.id_boutique" value="1"> -->
+
+
+    <div class="form-group">
+    <label for="categorie">Categorie</label>
+    <select required id="id" name="id"   class="custom-select" [(ngModel)]="vente.categorie.id">
+        <option selected > Choisissez une categorie</option>
+        <option disabled   *ngFor="let item of categories" [(ngValue)]="item.id" >--{{item.nomCategorie}}-- 
+        </option>
+        
+
+         
+        
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="categorie">Categorie</label>
+     <div class="container" >
+
+<mat-form-field   [style.width.px]=1000>
+  <mat-label>Categories</mat-label>
+  <mat-select  [formControl]="catControl"  [(ngModel)]="this.vente.sousCategorie.id">
+    <mat-option >-- Choisissez une categorie --</mat-option>
+    <mat-optgroup  *ngFor="let group of categories" [label]="group.nomCategorie"
+                  [disabled]="group.disabled">
+      <mat-option *ngFor="let sousCat of group.sousCategories" [value]="sousCat.id">
+        {{sousCat.nomSousCategorie}}
+      </mat-option>
+    </mat-optgroup>
+  </mat-select>
+</mat-form-field>
+
+</div>
+    </div> 
+
+    
+
+    <div class="form-group">
+      <label for="categorie">Marque</label>
+      <select id="id" name="id"   class="custom-select" (change)="onCodeChange($event)" [(ngModel)]="vente.marque.id">
+          <option selected value="0" > Choisissez la marque</option>
+          <option required   *ngFor="let item of marques" [(ngValue)]="item.id" >{{item.nomMarque}}</option>
+        </select>
+      </div>
+
+      <div ng-hide="vente.marque.id" class="form-group">
+        <label *ngIf="display" for="categorie">Model</label>
+        <select id="id" name="id" *ngIf="display"  class="custom-select" [(ngModel)]="vente.modele.id ">
+            <option selected > Choisissez le modele</option>
+            <option required   *ngFor="let item of modeles" [(ngValue)]="item.id" >{{item.nomModel}}</option>
+          </select>
+        </div>
+
+
+      <div class="form-group">
+        <label for="DescriptionAnn">Description</label>
+        <textarea class="form-control" [(ngModel)]="vente.description" name="description" id="description" rows="3"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="prixAnn">Prix</label>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">MAD</span>
+          <span class="input-group-text">0.00</span>
+        </div>
+        <input type="text" class="form-control" [(ngModel)]="vente.prix" name="prix" id="prix">
+      </div>
+    </div>
+
+  
+        <div class="form-group">
+          <label for="uploadImg">upload</label>
+          <input type="file" class="form-control-file" [(ngModel)]="vente.imageUrl" name="imageUrl"  id="imageUrl" multiple>
+        </div>
+
+        <div class="form-group">
+            
+            <button type="onSubmit()" class="btn btn-primary">deposer</button>
+        </div>
+        
+    
+
+  </form>
+
+</div>
+
+<div [hidden]="!submitted">
+    <h4>You submitted successfully!</h4>
+    <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
+  </div>
+
+</div>

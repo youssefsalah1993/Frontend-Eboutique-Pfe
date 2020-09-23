@@ -1,0 +1,8 @@
+<select (click)="doSearchV($event.target.value)"  class="form-control input-sm" data-live-search="true">
+
+    <option  >villes </option>
+    <option  *ngFor="let item of villes"  routerLink="/announces/[(value)]"  [(value)]="item.id">{{item.nomVille}}</option>
+   
+    <!-- [selected]="item.nomVille == item.nomVille" -->
+  </select>
+ 

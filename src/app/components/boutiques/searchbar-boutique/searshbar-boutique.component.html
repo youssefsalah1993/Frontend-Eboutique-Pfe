@@ -1,0 +1,34 @@
+<section class="about">
+    <div class="container">
+      <br>
+      <div class="d-flex justify-content-center">
+  
+        <div class="col-xs-3">
+  
+          <input #myInput (keyup.enter)="doSearch(myInput.value)"
+           class="form-control" type="text" placeholder="Nom Boutique " aria-label="Search">
+        </div>
+  
+        &nbsp; &nbsp; &nbsp; &nbsp;
+  
+        &nbsp; &nbsp; &nbsp; &nbsp;
+  
+        <!--get Villes list from comp : ville-list  -->
+        <app-ville-for-boutique-drop-list></app-ville-for-boutique-drop-list>
+        
+        &nbsp; &nbsp; &nbsp; &nbsp;
+  
+  
+        <button (click)="doSearch(myInput.value)" class="btn btn-outline-warning btn-rounded btn-sm my-0" >Search</button>
+  
+  
+      </div>
+  
+      <br>
+  
+  
+  
+    </div>
+  
+  
+  </section>

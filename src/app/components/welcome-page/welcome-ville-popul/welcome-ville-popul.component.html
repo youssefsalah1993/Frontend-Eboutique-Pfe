@@ -1,0 +1,12 @@
+
+
+ <div class="count-box" >
+    <div class="row">
+ <p  *ngFor="let tempville of villes index as i">
+
+        <button type="button" routerLink="/announces/searchV/{{tempville.id}}"  class="btn btn-outline-primary">{{ tempville.nomVille }}</button>
+        &nbsp;  &nbsp;
+          
+ </p>
+ </div>
+</div>

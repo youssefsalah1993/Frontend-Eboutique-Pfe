@@ -1,0 +1,39 @@
+
+
+<div class="container">
+    <!-- Lunch the setIndexBoutique function   -->
+      {{setIndexBoutique()}}
+        <div *ngFor="let i of Arr(rowGrid).fill(1)"  class="card-deck">
+          
+          
+          <div *ngFor="let j of Arr(num).fill(1) "   class="card">
+            <!-- execute the setIndexBoutique function to increment   -->
+    
+            {{incIndexVente()}}
+            
+    
+            <!--  <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="dd" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" role="img"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg> -->
+            <ng-container *ngIf="boutiqueLength >= indexBoutiques">
+            
+            <img  class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="dd" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" role="img" src="assets/temp-img/boutique.jpg" alt="Mountain">
+            
+               
+            <div class="card-body">
+              <h5 class="card-title"><a routerLink="/boutiques/details/{{boutiques[(indexBoutiques-1)].id}}" >{{boutiques[(indexBoutiques-1)].nomBoutique}}</a>  </h5>
+              <p class="card-text"><i class="fas fa-map-marker-alt"></i>   {{  tests[indexBoutiques-1]  }}</p>
+              <p class="card-text"><i class="fas fa-store-alt"></i>   {{ boutiques[(indexBoutiques-1)].adresseBoutique }}  </p>
+              <p class="card-text"><i class="fas fa-phone-alt"></i> tel : {{ boutiques[(indexBoutiques-1)].tel1Boutique }} </p>
+              <!-- <p class="card-text" >   <i class="fas fa-dollar-sign"></i> {{ ventes[(indexBoutiques-1)].prix | currency:'MAD ' }} DH </p> -->
+              <p class="card-text" >   <i class="fas fa-blender-phone"></i> fix : {{ boutiques[(indexBoutiques-1)].tel2Boutique   }} </p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">{{ boutiques[(indexBoutiques-1)].dateModification }}</small>
+            </div>
+            </ng-container>
+          
+          </div>
+          
+          </div>
+         
+      
+      </div>

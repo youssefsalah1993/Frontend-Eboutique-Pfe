@@ -1,0 +1,49 @@
+<div class="card" >
+    <div class="card-body">
+      
+      
+    <div *ngFor="let tempvente of ventes">
+      <h5 class="card-title"> <b>{{tempvente.titleVente}}</b></h5>
+      
+
+       <!--Carousel Wrapper-->
+
+       <ngb-carousel *ngIf="images">
+        <ng-template ngbSlide>
+          <div class="picsum-img-wrapper">
+            <img [src]="images[0]" alt="Random first slide" class="w-100">
+          </div>
+          <div class="carousel-caption">
+            <!-- <h3>First slide label</h3>
+            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> -->
+          </div>
+        </ng-template>
+        <ng-template ngbSlide>
+          <div class="picsum-img-wrapper">
+            <img [src]="images[1]" alt="Random second slide" class="w-100">
+          </div>
+          <div class="carousel-caption">
+           
+          </div>
+        </ng-template>
+        <ng-template ngbSlide>
+          <div class="picsum-img-wrapper">
+            <img [src]="images[2]" alt="Random third slide" class="w-100">
+          </div>
+          <div class="carousel-caption">
+           
+          </div>
+        </ng-template>
+      </ngb-carousel>
+<!--/.Carousel Wrapper-->
+<h5 class="card-title"><B> {{ tempvente.prix }} DH</B></h5>
+      <!-- <p class="card-text"> <B> Description </B> </p> -->
+      <cdk-virtual-scroll-viewport itemSize="50" class="example-viewport">
+      <p class="card-text">  {{tempvente.description}} </p>
+    </cdk-virtual-scroll-viewport>
+      <!-- <p class="card-text"> <B> Categorie :nomCat </B> </p> -->
+      <!-- <p class="card-text"> <B> Adresse : xxxxxxxxxxxxxx </B> </p> -->
+      <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+    </div>
+</div>
+  </div>

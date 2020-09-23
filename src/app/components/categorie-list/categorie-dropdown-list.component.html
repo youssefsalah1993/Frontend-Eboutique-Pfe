@@ -1,0 +1,6 @@
+<select class="form-control input-sm"  data-live-search="true">
+
+    <option >categorie</option>
+    <option *ngFor="let item of categories" [(value)]="item.value">{{item.nomCategorie}}</option>
+   
+  </select>

@@ -1,0 +1,14 @@
+<div class="row"  >
+
+    <div *ngFor="let tempcategorie of categoriess"
+ class="col-lg-3 col-md-6 text-center" data-aos="fade-up">
+    <div class="count-box">
+      <i class="icofont-simple-smile" style="color: #20b38e;"></i>
+    
+      <p> <a routerLink="/announces/searchC/{{tempcategorie.id}} "  routerLinkActive="active-link">{{ tempcategorie.nomCategorie}}</a> </p>
+    </div>
+  </div>
+
+  
+
+</div>

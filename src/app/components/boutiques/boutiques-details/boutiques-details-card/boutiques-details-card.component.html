@@ -1,0 +1,51 @@
+  <!-- Profile widget -->
+  <div class="bg-white shadow rounded overflow-hidden">
+    <div class="px-4 pt-0 pb-4 cover">
+        <div class="media align-items-end profile-head">
+            <div class="profile mr-3"><img src="assets/temp-img/boutique.jpg" alt="..." width="130" class="rounded mb-2 img-thumbnail"></div>
+            <div class="media-body mb-5 text-white">
+                <h4 class="mt-0 mb-0">Boutique  : {{boutiques[0].nomBoutique}}</h4>
+                <p class="small mb-4"> <i class="fas fa-map-marker-alt mr-2"></i>Marrakech</p>
+            </div>
+        </div>
+    </div>
+    <div class="bg-light p-4 d-flex justify-content-end text-center">
+        <ul class="list-inline mb-0">
+            <li class="list-inline-item">
+                <h5 class="font-weight-bold mb-0 d-block">20</h5><small class="text-muted"> <i class="fas fa-image mr-1"></i>annonces</small>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="px-4 py-3">
+        <h5 class="mb-0">Info</h5>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                <div class="p-4 rounded shadow-sm bg-light">
+                   <b>
+                    {{boutiques[0].descriptionBoutique}}
+                    </b>
+                    </div>
+                </div>
+                <div class="col-md-4">
+        <div class="p-4 rounded shadow-sm bg-light">
+            <p class="font-italic mb-0"> <i class="fas fa-calendar-check"></i> 
+                Contact : <b> {{boutiques[0].tel1Boutique}} </b> 
+            </p> <br>
+            <p class="font-italic mb-0"> <i class="fas fa-map-marker-alt"></i> <B> {{boutiques[0].adresseBoutique}}</B></p>
+            <br>
+            <p class="font-italic mb-0"> <i class="fas fa-calendar-check"></i> Sur Notre platform depuis <b>{{ boutiques[0].dateCreation}} </b> 
+            </p> <br>
+            <p class="font-italic mb-0"> <i class="fas fa-medal"></i> Boutique de Type XXX</p> <br>
+            
+        </div> 
+        </div>
+       
+            </div>
+        </div>
+    </div>
+   
+</div>
+
+<!-- card sticky-top -->
