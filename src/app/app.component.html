@@ -1,0 +1,71 @@
+<!-- ======= Top Bar ======= -->
+<section id="topbar" class="d-none d-lg-block">
+    <div class="container clearfix">
+      <div class="contact-info float-left">
+        <i class="fas fa-envelope"></i><a href="mailto:contact@example.com">contact@eboutique.com </a> 
+         <i class="fas fa-phone-alt"></i>0643013442
+      </div>
+      
+      <div class="social-links float-right">
+        <a routerLink="/connection" routerLinkActive="active-link"><i class="fas fa-sign-in-alt"></i> Connexion </a>
+        <a *ngIf="isLoggedIn==true" class="nav-link" href="/logout" (click)=handleLogout()>Logout</a>
+        <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="twitter"><i class="fab fa-youtube-square"></i></a>
+
+        
+       
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="card sticky-top">
+    <div class="container">
+
+      <div class="logo float-left">
+        <!-- <h1 class="text-light"><a href="index.html"><span>Eboutique</span></a></h1> -->
+        <h1 class="text-light"><a routerLink="/index" routerLinkActive="active-link"><span>Eboutique</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav class="nav-menu float-right d-none d-lg-block">
+        <ul>
+          <li ><a routerLink="/announces" routerLinkActive="active-link" >Rechercher</a></li>
+          <li><a routerLink="/boutiques">Boutiques</a></li>
+          <li class="active" (click)="open()"><a routerLink=""><i class="fas fa-plus-square"></i> Deposer annonce</a></li>
+          <!--<li class="drop-down"><a href="">Drop Down</a> 
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="drop-down"><a href="#">Drop Down 2</a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+              <li><a href="#">Drop Down 5</a></li>
+            </ul>
+          </li>-->
+          <li><a routerLink="#contact">Contactez nous</a></li>
+        </ul>
+      </nav>
+      <!-- .nav-menu -->
+
+    </div>
+  </header>
+  <!-- End Header -->
+
+<div>
+
+  <router-outlet></router-outlet>
+</div>
+  
+
+
+
