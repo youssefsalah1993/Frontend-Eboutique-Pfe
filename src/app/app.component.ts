@@ -17,7 +17,7 @@ localStorage.setItem('currentUser', "yourUser");
 
 
 export class AppComponent implements OnInit{
-  title = ' eboutique Prject ';
+  title = 'Magpies Project ';
 
   isLoggedIn=false ;
   isLogged=false;

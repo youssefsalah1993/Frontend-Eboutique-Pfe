@@ -15,7 +15,7 @@ export class AnnouncesDetailsVentecardComponent implements OnInit {
   nomCat : String;
   idBoutique : number;
   
-  images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/900/500`);
+  images = [944, 1011, 984].map((n) => `assets/temp-ann/dss.png`);
 
   constructor(private venteService : VenteService,private route: ActivatedRoute) { 
    // AnnouncesGridComponent ann = new AnnouncesGridComponent();;
@@ -34,6 +34,7 @@ export class AnnouncesDetailsVentecardComponent implements OnInit {
       data => {
        // this.ventes = new Vente(data);
         this.ventes = data;
+        
         console.log(this.ventes);
         this.venteCategorie();
 
